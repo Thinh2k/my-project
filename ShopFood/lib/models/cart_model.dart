@@ -24,7 +24,7 @@ class Cart extends Equatable{
       products.fold(0, (total, current) => total + current.price);
 
   double deliveryFree(subtotal){
-    if(subtotal >= 50000.0){
+    if(subtotal >= 100000.0){
       return 10000.0;
     }else
       return 00.0;
@@ -35,10 +35,10 @@ class Cart extends Equatable{
 }
 
   String freeDelivery(subtotal){
-    if(subtotal >=50000.0){
+    if(subtotal >=100000.0){
       return 'Đang sử dụng ưu đãi giảm giá';
     } else{
-      double missing = 50000.0 - subtotal;
+      double missing = 100000.0 - subtotal;
       return ' Thêm ${missing.toStringAsFixed(2)}\đ Để được giảm giá';
     }
   }

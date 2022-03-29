@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               if(state is CategoryLoaded){
                 return CarouselSlider(
                   options: CarouselOptions(
-                    aspectRatio: 1.2,
+                    aspectRatio: 2.5,
                     viewportFraction: 0.9,
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height,
@@ -58,14 +58,14 @@ class HomeScreen extends StatelessWidget {
                   BlocBuilder <ProductBloc, ProductState>(
                       builder: (context, state) {
                         print('Current checkout state: ${state.runtimeType.toString()}');
-                        // if (state is ProductLoading) {
-                        //   return Center(
-                        //     child: CircularProgressIndicator(),
-                        //   );
-                        // }
+                        if (state is ProductLoading) {
+                          return Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }
                         if (state is ProductLoaded) {
                           return ProductCarousel(
-                              products: state.products
+                              products: state.product
                                   .where((product) =>
                               product
                                   .isRecommended)
@@ -84,14 +84,14 @@ class HomeScreen extends StatelessWidget {
                   BlocBuilder <ProductBloc, ProductState>(
                       builder: (context, state) {
                         print('Current checkout state: ${state.runtimeType.toString()}');
-                        // if (state is ProductLoading) {
-                        //   return Center(
-                        //     child: CircularProgressIndicator(),
-                        //   );
-                        // }
+                        if (state is ProductLoading) {
+                          return Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }
                         if (state is ProductLoaded) {
                           return ProductCarousel(
-                              products: state.products
+                              products: state.product
                                   .where((product) => product
                                   .isPopular)
                                   .toList());
