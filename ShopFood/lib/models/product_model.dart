@@ -118,7 +118,7 @@ class Product extends Equatable{
 
     // Thực phẩm đông lạnh
     Product(
-      name: '1 con Thịt gà',
+      name: 'Thịt gà 1con',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
       'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
@@ -338,6 +338,36 @@ class Product extends Equatable{
       isRecommended: false,
       isPopular: false,
       informationProduct: 'Dưa chuột là một cây trồng phổ biến trong họ bầu bí, là loại rau ăn quả thương mại quan trọng, nó được trồng lâu đời trên thế giới và trở thành thực phẩm của nhiều nước.',
+    ),
+    Product(
+      name: '500g Rau Mồng tơi',
+      category: 'Rau củ quả',
+      imageUrl:
+      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      price: 14500,
+      isRecommended: false,
+      isPopular: false,
+      informationProduct: 'Mồng tơi mát và mùa nè nóng nực nó được xem như thứ rau vua. Trong Đông y, mồng tơi có tính hàn, vị chua, không độc, đi vào 5 kinh tâm, tì, can, đại trường, tá tràng, giúp lợi tiểu, tán nhiệt, giải độc, làm đẹp da, trị rôm sảy, mụn nhọt.',
+    ),
+    Product(
+      name: '200g Măng tây',
+      category: 'Rau củ quả',
+      imageUrl:
+      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      price: 28000,
+      isRecommended: false,
+      isPopular: false,
+      informationProduct: 'Măng tây là một loại thực vật dùng làm rau. Cây thảo có thân mọc ngầm trong đất, thường gọi là thân rễ. Thân rễ dày, mang nhiều rễ dài, đường kính 5-6mm, màu nâu sáng, xốp. Các thân đứng mọc trong không khí lởm chởm những vết sẹo của những nhánh đã rụng. ',
+    ),
+    Product(
+      name: '500g Bí đỏ',
+      category: 'Rau củ quả',
+      imageUrl:
+      'https://images.unsplash.com/photo-1509622905150-fa66d3906e09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', //https://unsplash.com/photos/kcYXj4tBtes
+      price: 8000,
+      isRecommended: false,
+      isPopular: false,
+      informationProduct: 'Bí ngô hay bí đỏ là một loại cây dây thuộc chi Cucurbita, họ Bầu bí. Đây là tên thông dụng để chỉ các loại cây thuộc các loài: Cucurbita pepo, Cucurbita mixta, Cucurbita maxima, và Cucurbita moschata. Nguồn gốc của bí ngô chưa được xác định tuy nhiên nhiều người cho rằng bí ngô có nguồn gốc ở Bắc Mỹ.',
     ),
   ];
 }

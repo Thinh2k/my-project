@@ -29,6 +29,6 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     );
   }
   void  _onUpdateProducts(event, Emitter<ProductState> emit){
-    emit (ProductLoaded(product: event.product));
+    emit (ProductLoaded(products: event.products));
   }
 }

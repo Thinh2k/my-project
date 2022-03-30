@@ -27,98 +27,98 @@ class ProductCard extends StatelessWidget {
         arguments: product);
       },
       child: Stack(
-          children: [
-            Container(
-              width: widthValue,
-              height: 150,
-              child: Image.network(product.imageUrl,
-                fit: BoxFit.cover,),
-            ),
-            Positioned(
-                top: 60,
-                left: leftPosition,
-                child: Container(
-                  width: widthValue - 5 - leftPosition,
-                  height: 80,
-                  alignment: Alignment.bottomCenter,
-                  decoration: BoxDecoration(
-                      color: Colors.black.withAlpha(50)
-                  ),)),
-            Positioned(
-              top: 65,
-              left: leftPosition + 5,
-              child: Container(
-                alignment: Alignment.bottomCenter,
-                width: widthValue - 10 - leftPosition,
-                height: 70,
-                decoration: BoxDecoration(
-                  color: Colors.blueGrey,
+              children: [
+                Container(
+                  width: widthValue,
+                  height: 150,
+                  child: Image.network(product.imageUrl,
+                    fit: BoxFit.cover,),
                 ),
-                child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                Positioned(
+                    top: 60,
+                    left: leftPosition,
+                    child: Container(
+                      width: widthValue - 15 - leftPosition,
+                      height: 80,
+                      alignment: Alignment.bottomCenter,
+                      decoration: BoxDecoration(
+                          color: Colors.black.withAlpha(50)
+                      ),)),
+                Positioned(
+                  top: 65,
+                  left: leftPosition + 5,
+                  child: Container(
+                    alignment: Alignment.bottomCenter,
+                    width: widthValue - 10 - leftPosition,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                    ),
+                    child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
                           children: [
-                            Text(
-                              product.name,
-                              style:
-                              Theme.of(context).textTheme.headline5!.copyWith(
-                                color: Colors.white,
-                              ),
-                            ),
-                            Text(
-                              '${product.price}\đ',
-                              style:
-                              Theme.of(context).textTheme.headline6!.copyWith(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                        BlocBuilder <CartBloc, CartState>(
-                          builder: (context, state) {
-                            if(state is CartLoading){
-                              return Center(
-                                child: CircularProgressIndicator(),
-                              );
-                            }
-                            if(state is CartLoaded){
-                              return Expanded(
-                                child: IconButton(
-                                    onPressed: (){
-                                      final snackBar = SnackBar(content: Text('Đã thêm vào giỏ hàng'),
-                                      );
-                                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                                      context.read<CartBloc>().add(AddProduct(product));
-                                    },
-                                    icon: Icon(Icons.add_circle, color: Colors.white)),
-                              );
-                            } else {
-                              return Text('Đã xảy ra sự cố');
-                            }
-                          }),
-                        isWishlist
-                            ? Expanded(
-                                child: IconButton(
-                                  icon: Icon(Icons.delete,
-                                  color: Colors.white,),
-                                  onPressed: () {
-                                    final snackBar = SnackBar(
-                                        content: Text('Đã xóa sản phẩm yêu thích!'));
-                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                                    context.read<WishlistBloc>().add(RemoveProductFromWishList(product));
-                                  },
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  product.name,
+                                  style:
+                                  Theme.of(context).textTheme.headline5!.copyWith(
+                                    color: Colors.white,
+                                  ),
                                 ),
-                            ) : SizedBox(),
-                      ],
-                    )
+                                Text(
+                                  '${product.price}\đ',
+                                  style:
+                                  Theme.of(context).textTheme.headline6!.copyWith(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            BlocBuilder <CartBloc, CartState>(
+                              builder: (context, state) {
+                                if(state is CartLoading){
+                                  return Center(
+                                    child: CircularProgressIndicator(),
+                                  );
+                                }
+                                if(state is CartLoaded){
+                                  return Expanded(
+                                    child: IconButton(
+                                        onPressed: (){
+                                          final snackBar = SnackBar(content: Text('Đã thêm vào giỏ hàng'),
+                                          );
+                                          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                          context.read<CartBloc>().add(AddProduct(product));
+                                        },
+                                        icon: Icon(Icons.add_circle, color: Colors.white)),
+                                  );
+                                } else {
+                                  return Text('Đã xảy ra sự cố');
+                                }
+                              }),
+                            isWishlist
+                                ? Expanded(
+                                    child: IconButton(
+                                      icon: Icon(Icons.delete,
+                                      color: Colors.white,),
+                                      onPressed: () {
+                                        final snackBar = SnackBar(
+                                            content: Text('Đã xóa sản phẩm yêu thích!'));
+                                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                        context.read<WishlistBloc>().add(RemoveProductFromWishList(product));
+                                      },
+                                    ),
+                                ) : SizedBox(),
+                          ],
+                        )
+                    ),
+                  ),
                 ),
-              ),
-            ),
-          ]),
-    );
+              ]),
+      );
   }
 }

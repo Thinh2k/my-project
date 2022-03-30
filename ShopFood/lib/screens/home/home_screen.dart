@@ -65,10 +65,10 @@ class HomeScreen extends StatelessWidget {
                         }
                         if (state is ProductLoaded) {
                           return ProductCarousel(
-                              products: state.product
+                              products: state.products
                                   .where((product) =>
                               product
-                                  .isRecommended)
+                                    .isRecommended)
                                   .toList());
                         }
                         else {
@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                         }
                         if (state is ProductLoaded) {
                           return ProductCarousel(
-                              products: state.product
+                              products: state.products
                                   .where((product) => product
                                   .isPopular)
                                   .toList());
