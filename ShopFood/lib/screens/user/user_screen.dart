@@ -1,6 +1,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shopfood/blocs/checkout/checkout_bloc.dart';
 import 'package:shopfood/screens/information/information_screen.dart';
 import 'package:shopfood/screens/login/firebase_user.dart';
 import 'package:shopfood/screens/login/login_screen.dart';
@@ -48,6 +49,7 @@ getCurrentUser(){
               children: [
                   Center(
                     child: UserAccountsDrawerHeader(
+                      arrowColor: Colors.blueGrey,
                       accountName: null,
                       accountEmail: Text(loginUser!.email.toString(),
                       style: Theme.of(context).textTheme.headline3),

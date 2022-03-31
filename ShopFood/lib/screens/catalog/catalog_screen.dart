@@ -34,7 +34,7 @@ class CatalogScreen extends StatelessWidget {
             return Center(
                 child: ProductCard(
                   product: categoryProducts[index],
-                widthFactor: 2.2  ,));
+                widthFactor: 2.2 ));
           })
     );
   }

@@ -10,10 +10,10 @@ abstract class ProductEvent extends Equatable {
 class LoadProducts extends ProductEvent {}
 
 class UpdateProducts extends ProductEvent {
-  final List<Product> products;
+  final List<Product> product;
 
-  UpdateProducts(this.products);
+  UpdateProducts(this.product);
 
   @override
-  List<Object> get props => [products];
+  List<Object> get props => [product];
 }

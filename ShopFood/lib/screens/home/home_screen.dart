@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
               if(state is CategoryLoaded){
                 return CarouselSlider(
                   options: CarouselOptions(
-                    aspectRatio: 2.5,
+                    aspectRatio: 1.4,
                     viewportFraction: 0.9,
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height,
@@ -50,59 +50,94 @@ class HomeScreen extends StatelessWidget {
                 return Text('Đã xảy ra sự cố');
               }
             }),
+          SizedBox(height: 10,),
           Column(
             children: [
-              SectionTitle(title: 'Sản phẩm Hot'),
-              Row(
-                children: [
-                  BlocBuilder <ProductBloc, ProductState>(
-                      builder: (context, state) {
-                        print('Current checkout state: ${state.runtimeType.toString()}');
-                        if (state is ProductLoading) {
-                          return Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }
-                        if (state is ProductLoaded) {
-                          return ProductCarousel(
-                              products: state.products
-                                  .where((product) =>
-                              product
-                                    .isRecommended)
-                                  .toList());
-                        }
-                        else {
-                          return Text('Đã xảy ra sự cố');
-                        }
-                      }
-                  ),
-                ],
-              ),
+              SectionTitle(title: 'Sản phẩm bán chạy'),
+              SizedBox(height: 5,),
+              ProductCarousel(products: Product.products
+                  .where((product) => product
+                  .isRecommended).toList()),
+              // Row(
+              //   children: [
+              //     BlocBuilder <ProductBloc, ProductState>(
+              //         builder: (context, state) {
+              //           print('Current checkout state: ${state.runtimeType.toString()}');
+              //           if (state is ProductLoading) {
+              //             return Center(
+              //               child: CircularProgressIndicator(),
+              //             );
+              //           }
+              //           if (state is ProductLoaded) {
+              //             return ProductCarousel(
+              //                 products: state.product
+              //                     .where((product) =>
+              //                 product
+              //                       .isRecommended)
+              //                     .toList());
+              //           }
+              //           else {
+              //             return Text('Đã xảy ra sự cố');
+              //           }
+              //         }
+              //     ),
+              //   ],
+              // ),
+              SizedBox(height: 10,),
               SectionTitle(title: 'Sản phẩm phổ biến'),
-              Row(
-                children: [
-                  BlocBuilder <ProductBloc, ProductState>(
-                      builder: (context, state) {
-                        print('Current checkout state: ${state.runtimeType.toString()}');
-                        if (state is ProductLoading) {
-                          return Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }
-                        if (state is ProductLoaded) {
-                          return ProductCarousel(
-                              products: state.products
-                                  .where((product) => product
-                                  .isPopular)
-                                  .toList());
-                        }
-                        else {
-                          return Text('Đã xảy ra sự cố');
-                        }
-                      }
-                  ),
-                ],
-              ),
+              SizedBox(height: 5,),
+              ProductCarousel(products: Product.products
+                  .where((product) => product
+                  .isPopular).toList()),
+              // Row(
+              //   children: [
+              //     BlocBuilder <ProductBloc, ProductState>(
+              //         builder: (context, state) {
+              //           print('Current checkout state: ${state.runtimeType.toString()}');
+              //           if (state is ProductLoading) {
+              //             return Center(
+              //               child: CircularProgressIndicator(),
+              //             );
+              //           }
+              //           if (state is ProductLoaded) {
+              //             return ProductCarousel(
+              //                 products: state.product
+              //                     .where((product) =>
+              //                 product
+              //                       .isRecommended)
+              //                     .toList());
+              //           }
+              //           else {
+              //             return Text('Đã xảy ra sự cố');
+              //           }
+              //         }
+              //     ),
+              //   ],
+              // ),
+              // Row(
+              //   children: [
+              //     BlocBuilder <ProductBloc, ProductState>(
+              //         builder: (context, state) {
+              //           print('Current checkout state: ${state.runtimeType.toString()}');
+              //           if (state is ProductLoading) {
+              //             return Center(
+              //               child: CircularProgressIndicator(),
+              //             );
+              //           }
+              //           if (state is ProductLoaded) {
+              //             return ProductCarousel(
+              //                 products: state.product
+              //                     .where((product) => product
+              //                     .isPopular)
+              //                     .toList());
+              //           }
+              //           else {
+              //             return Text('Đã xảy ra sự cố');
+              //           }
+              //         }
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ],

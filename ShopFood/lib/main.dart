@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
         title: 'Green Food',
         theme: theme(),
         onGenerateRoute: AppRouter.onGenerateRoute,
-        initialRoute: HomeScreen.routeName,
+        initialRoute: LoginScreen.routeName,
       ),
     );
   }

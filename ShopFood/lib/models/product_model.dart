@@ -51,7 +51,7 @@ class Product extends Equatable{
       imageUrl:
       'https://images.unsplash.com/photo-1622766815178-641bef2b4630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=919&q=80',
       price: 10000,
-      isRecommended: false,
+      isRecommended: true,
       isPopular: false,
       informationProduct: 'Thùng 12 chai nước ngọt 7 Up vị chanh 1.5 lít',
     ),
@@ -62,7 +62,7 @@ class Product extends Equatable{
       'https://media.istockphoto.com/photos/bottled-water-picture-id147046441?s=612x612',
       price: 5000,
       isRecommended: true,
-      isPopular: true,
+      isPopular: false,
       informationProduct: 'Chai nước có nhiều kích cỡ 1.5L, 1L, 500ml, 300ml.',
     ),
     Product(
@@ -72,14 +72,14 @@ class Product extends Equatable{
       'https://images.unsplash.com/photo-1629203851288-7ececa5f05c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 10000,
       isRecommended: true,
-      isPopular: true,
+      isPopular: false,
       informationProduct: 'Nước Ngọt Pepsi Không Calo 330ml Thùng 24 lon. Pepsi là một đồ uống giải khát có gas, lần đầu tiên được sản xuất bởi Bradham. ',
     ),
     Product(
       name: '1 lon Bia Tiger',
       category: 'Đồ uống',
       imageUrl:
-      'https://images.unsplash.com/photo-1633785586918-aecf1088218d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', //https://unsplash.com/photos/5LIInaqRp5s
+      'https://images.unsplash.com/photo-1633785586918-aecf1088218d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
       price: 15000,
       isRecommended: false,
       isPopular: false,
@@ -89,17 +89,17 @@ class Product extends Equatable{
       name: 'CoCa-CoLa',
       category: 'Đồ uống',
       imageUrl:
-      'https://images.unsplash.com/photo-1629019416996-712aa1bd87f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1629019416996-712aa1bd87f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
       price: 10000,
       isRecommended: true,
-      isPopular: true,
+      isPopular: false,
       informationProduct: 'Coca-Cola Thùng 24 Lon Nước Ngọt Coca Cola 250Ml',
     ),
     Product(
       name: 'Red Bull',
       category: 'Đồ uống',
       imageUrl:
-      'https://images.unsplash.com/photo-1632858280935-d5611683e434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1632858280935-d5611683e434?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=385&q=80',
       price: 13000,
       isRecommended: false,
       isPopular: false,
@@ -109,7 +109,7 @@ class Product extends Equatable{
       name: '1 Chai bia Heineken',
       category: 'Đồ uống',
       imageUrl:
-      'https://images.unsplash.com/photo-1618885472179-5e474019f2a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1618885472179-5e474019f2a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
       price: 14500,
       isRecommended: false,
       isPopular: false,
@@ -121,27 +121,27 @@ class Product extends Equatable{
       name: 'Thịt gà 1con',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1587593810167-a84920ea0781?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 100000,
       isRecommended: false,
-      isPopular: false,
+      isPopular: true,
       informationProduct: 'Thịt gà tươi sạch được đóng gói sẵn, đã qua kiểm dịch và đạt chứng nhân an toàn vệ sinh thực phẩm. Nhanh tay đặt ngay để nhận giá cực kỳ ưu đãi.',
     ),
     Product(
       name: '1kg Thịt lợn',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80',
       price: 70000,
       isRecommended: false,
-      isPopular: false,
+      isPopular: true,
       informationProduct: 'Thịt Nạc Heo Chỉ từ 70k - Thịt Heo Đông lạnh chất lượng',
     ),
     Product(
       name: '1kg Thịt bò',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://images.unsplash.com/photo-1603048297172-c92544798d5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1603048297172-c92544798d5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 270000,
       isRecommended: false,
       isPopular: false,
@@ -151,7 +151,7 @@ class Product extends Equatable{
       name: '1kg Tôm',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/large-frozen-headless-langoustine-prawns-in-a-package-picture-id1311601571?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/large-frozen-headless-langoustine-prawns-in-a-package-picture-id1311601571?s=612x612',
       price: 110000,
       isRecommended: false,
       isPopular: false,
@@ -161,17 +161,17 @@ class Product extends Equatable{
       name: '200g Cá hồi',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/fresh-salmon-fillet-in-plastic-packing-for-sell-in-supermarket-or-picture-id1210599135?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/fresh-salmon-fillet-in-plastic-packing-for-sell-in-supermarket-or-picture-id1210599135?s=612x612',
       price: 110000,
       isRecommended: false,
       isPopular: false,
       informationProduct: 'Với công nghệ cấp đông của nước ngoài, cá hồi được xử lý và cấp đông ở nhiệt độ -40°C thật nhanh và bảo quản ở nhiệt độ -18°C. Với cách xử lý này cá vẫn giữ được độ tươi, màu sắc, chất lượng của cá và bảo quản được lâu dài.',
     ),
     Product(
-      name: '500g Cá thu (4-6con)',
+      name: '500g Cá thu',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/mackerel-fish-on-ice-picture-id155606540?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/mackerel-fish-on-ice-picture-id155606540?s=612x612',
       price: 64500,
       isRecommended: false,
       isPopular: false,
@@ -181,7 +181,7 @@ class Product extends Equatable{
       name: '500g Mực ống',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/frozen-squid-picture-id1386929253?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/frozen-squid-picture-id1386929253?s=612x612',
       price: 112000,
       isRecommended: false,
       isPopular: false,
@@ -191,17 +191,17 @@ class Product extends Equatable{
       name: '1kg Cá Ngừ',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/nice-picture-id1167355257?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/nice-picture-id1167355257?s=612x612',
       price: 150000,
       isRecommended: false,
       isPopular: false,
       informationProduct: 'Cá ngừ đại dương là loại cá lớn thuộc họ Cá bạc má, chủ yếu thuộc chi Thunnus, sinh sống ở vùng biển ấm, cách bờ độ 185 km trở ra. Ở Việt Nam, Cá ngừ đại dương là tên địa phương để chỉ loại cá ngừ mắt to và cá ngừ vây vàng.',
     ),
     Product(
-      name: '1kg Ghẹ (Loại 3-5 con/kg)',
+      name: '1kg Ghẹ',
       category: 'Thực phẩm đông lạnh',
       imageUrl:
-      'https://media.istockphoto.com/photos/selective-focus-on-frozen-blue-crab-lying-on-ice-picture-id1316421823?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/selective-focus-on-frozen-blue-crab-lying-on-ice-picture-id1316421823?s=612x612',
       price: 200000,
       isRecommended: false,
       isPopular: false,
@@ -213,7 +213,7 @@ class Product extends Equatable{
       name: '1kg Carrot',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1445282768818-728615cc910a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1445282768818-728615cc910a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 17000,
       isRecommended: false,
       isPopular: false,
@@ -223,7 +223,7 @@ class Product extends Equatable{
       name: '1kg Cà Chua',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1561136594-7f68413baa99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1561136594-7f68413baa99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 5500,
       isRecommended: false,
       isPopular: false,
@@ -233,17 +233,17 @@ class Product extends Equatable{
       name: '1kg Ớt đỏ',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1526346698789-22fd84314424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1526346698789-22fd84314424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 25000,
       isRecommended: false,
-      isPopular: false,
+      isPopular: true,
       informationProduct: 'Ớt đỏ, loại gia vị cay quen thuộc, được dùng trong rất nhiều món ăn ở xứ ta.',
     ),
     Product(
       name: '1kg Tỏi',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1636210589096-a53d5dacd702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1636210589096-a53d5dacd702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
       price: 20000,
       isRecommended: false,
       isPopular: false,
@@ -253,17 +253,17 @@ class Product extends Equatable{
       name: '1kg SúpLơ',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnZXRhYmxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnZXRhYmxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
       price: 40000,
       isRecommended: false,
       isPopular: false,
-      informationProduct: 'Bông cải trắng hay còn gọi là súp lơ, hay su lơ, bắp su lơ, hoa lơ, cải hoa hay cải bông trắng là một loại cải ăn được, thuộc loài Brassica oleracea, họ Cải, mọc quanh năm, gieo giống bằng hạt. Phần sử dụng làm thực phẩm của súp lơ là toàn bộ phần hoa chưa nở, phần này rất mềm, xốp nên không chịu được mưa nắng.',
+      informationProduct: 'Bông cải trắng hay còn gọi là súp lơ, hay su lơ, bắp su lơ, hoa lơ, cải hoa hay cải bông trắng là một loại cải ăn được, thuộc loài Brassica oleracea, họ Cải, mọc quanh năm, gieo giống bằng hạt. Phần sử dụng làm thực phẩm của súp lơ là toàn bộ phần hoa chưa nở, gphần này rất mềm, xốp nên không chịu được mưa nắng.',
     ),
     Product(
       name: '1kg Đậu Que',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
       price: 30000,
       isRecommended: false,
       isPopular: false,
@@ -273,7 +273,7 @@ class Product extends Equatable{
       name: '1kg Ớt chuông',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=410&q=80',
       price: 61000,
       isRecommended: false,
       isPopular: false,
@@ -283,7 +283,7 @@ class Product extends Equatable{
       name: '1kg Khoai tây',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1590165482129-1b8b27698780?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1590165482129-1b8b27698780?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80',
       price: 40000,
       isRecommended: false,
       isPopular: false,
@@ -293,7 +293,7 @@ class Product extends Equatable{
       name: '200g Gừng',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1615484478243-c94e896edbae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHZlZ2V0YWJsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1615484478243-c94e896edbae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHZlZ2V0YWJsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
       price: 30000,
       isRecommended: false,
       isPopular: false,
@@ -303,17 +303,17 @@ class Product extends Equatable{
       name: '1kg rau Xà lách',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1556843824-2a36847e3173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1556843824-2a36847e3173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
       price: 42000,
       isRecommended: false,
-      isPopular: false,
+      isPopular: true,
       informationProduct: 'Giá rau xà lách xanh hiện nay có giá trung bình từ 42 nghìn/ 1kg đây là loại rau được nhiều người yêu thích đặc biệt người dân Hà Nội',
     ),
     Product(
       name: '1kg Cải ngọt',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1511993226957-cd166aba52d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=398&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1511993226957-cd166aba52d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=398&q=80',
       price: 20500,
       isRecommended: false,
       isPopular: false,
@@ -323,7 +323,7 @@ class Product extends Equatable{
       name: '1kg Cà tím',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1601477572224-cb15a76f30f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1601477572224-cb15a76f30f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
       price: 23000,
       isRecommended: false,
       isPopular: false,
@@ -333,7 +333,7 @@ class Product extends Equatable{
       name: '1kg Dưa chuột',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1589621316382-008455b857cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1589621316382-008455b857cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 16000,
       isRecommended: false,
       isPopular: false,
@@ -343,7 +343,7 @@ class Product extends Equatable{
       name: '500g Rau Mồng tơi',
       category: 'Rau củ quả',
       imageUrl:
-      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612',
       price: 14500,
       isRecommended: false,
       isPopular: false,
@@ -353,7 +353,7 @@ class Product extends Equatable{
       name: '200g Măng tây',
       category: 'Rau củ quả',
       imageUrl:
-      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://media.istockphoto.com/photos/macro-photography-of-fresh-spinach-concept-of-organic-food-picture-id906619122?s=612x612',
       price: 28000,
       isRecommended: false,
       isPopular: false,
@@ -363,7 +363,7 @@ class Product extends Equatable{
       name: '500g Bí đỏ',
       category: 'Rau củ quả',
       imageUrl:
-      'https://images.unsplash.com/photo-1509622905150-fa66d3906e09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60', //https://unsplash.com/photos/kcYXj4tBtes
+      'https://images.unsplash.com/photo-1509622905150-fa66d3906e09?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTN8fHZlZ2V0YWJsZXN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
       price: 8000,
       isRecommended: false,
       isPopular: false,

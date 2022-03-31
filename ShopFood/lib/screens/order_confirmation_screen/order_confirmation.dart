@@ -53,24 +53,6 @@ class OrderConfirmation extends StatelessWidget {
                       Text('Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi',
                           style: Theme.of(context).textTheme.headline4),
                       SizedBox(height: 20),
-                      Text('Thông tin đơn đặt hàng: ',
-                          style: Theme.of(context).textTheme.headline3),
-                      SizedBox(height: 20),
-                      Divider(thickness: 3),
-                      SizedBox(height: 5),
-                      // ListView(
-                      //   shrinkWrap: true,
-                      //   padding: EdgeInsets.only(left: 20.0),
-                      //   physics: NeverScrollableScrollPhysics(),
-                      //   children: [
-                      //     OrderSummaryProductCard(
-                      //         product: Product.products[0],
-                      //         quantity: 2),
-                      //     OrderSummaryProductCard(
-                      //         product: Product.products[1],
-                      //         quantity: 2),
-                      //   ],
-                      // ),
                       Divider(thickness: 2),
                       Text('Tổng chi phí: ',
                           style: Theme.of(context).textTheme.headline3),
