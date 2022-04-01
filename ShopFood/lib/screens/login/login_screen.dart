@@ -17,6 +17,9 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    bool _onShowPass = false;
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -52,15 +55,15 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: TextField(
-                  controller: passwordController,
-                  decoration: InputDecoration(
-                      hintText: "Nhập mật khẩu để đăng nhập",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)
-                      )
-                  ),
-                  obscureText: true,
-                ),
+                      controller: passwordController,
+                      decoration: InputDecoration(
+                          hintText: "Nhập mật khẩu để đăng nhập",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20)
+                          )
+                      ),
+                      obscureText: true,
+                    ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10,bottom: 20, left: 70),
@@ -78,7 +81,7 @@ class LoginScreen extends StatelessWidget {
                     if(emailController.text.isNotEmpty && passwordController.text.isNotEmpty){
                       service.loginUser(context, emailController.text, passwordController.text);
                     }else{
-                      service.errorBox(context, "Sai Email hoặc tài khoản, vui lòng nhập lại!!!");
+                      service.errorBox(context, "Sai Email hoặc mật khẩu, vui lòng nhập lại!!!");
                     }
                   },
                   child: Text("Đăng nhập")),
@@ -87,5 +90,6 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
+
 }
 

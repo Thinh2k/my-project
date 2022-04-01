@@ -6,6 +6,7 @@ import 'package:shopfood/screens/information/information_screen.dart';
 import 'package:shopfood/screens/login/firebase_user.dart';
 import 'package:shopfood/screens/login/login_screen.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_navbar.dart';
 
@@ -77,8 +78,9 @@ getCurrentUser(){
                   title: Text('Đăng xuất',),
                   textColor: Colors.black,
                   onTap: () async {
-                    await FirebaseAuth.instance.signOut();
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                    service.signOut(context);
+                    SharedPreferences pref = await SharedPreferences.getInstance();
+                    pref.remove("email");
                   }
             ),
           ],

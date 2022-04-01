@@ -17,39 +17,40 @@ class Service{
             MaterialPageRoute(builder: (context) => HomeScreen()))
       });
     } catch(e) {
-      errorBox(context, e);
+      errorBox(context, 'Email hoặc mật khẩu không phù hợp!!! Vui lòng nhập lại');
     }
   }
 
   void loginUser(context, email, password) async {
     try{
+
       await auth.signInWithEmailAndPassword(email: email, password: password).then((value) =>
       {
         Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen())),
       });
     } catch(e) {
-      errorBox(context, e);
+      errorBox(context, 'Sai Email hoặc mật khẩu, vui lòng nhập lại!!!');
     }
   }
 
-  // void signOut(context) async {
-  //   try{
-  //     await auth.signOut().then((value) => {
-  //       Navigator.pushAndRemoveUntil(
-  //           context,
-  //           MaterialPageRoute(builder: (context)=> LoginScreen()),
-  //               (route) => false)
-  //     });
-  //   } catch(e) {
-  //     errorBox(context, e);
-  //   }
-  // }
+  void signOut(context) async {
+    try{
+      await auth.signOut().then((value) => {
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context)=> LoginScreen()),
+                (route) => false)
+      });
+    } catch(e) {
+      errorBox(context,e);
+    }
+  }
   void errorBox(context, e){
     showDialog(
         context: context,
         builder: (context){
           return AlertDialog(
-            title: Text("Lỗi"),
+            title: Center(child: Text("Đã xảy ra lỗi: ")),
             content: Text(e.toString()),
           );
         });

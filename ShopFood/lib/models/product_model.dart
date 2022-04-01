@@ -154,7 +154,7 @@ class Product extends Equatable{
       'https://media.istockphoto.com/photos/large-frozen-headless-langoustine-prawns-in-a-package-picture-id1311601571?s=612x612',
       price: 110000,
       isRecommended: false,
-      isPopular: false,
+      isPopular: true,
       informationProduct: 'Tôm đông lạnh là thực phẩm được rất nhiều chị em nội trợ lựa chọn cho gia đình. Nếu bạn đang muốn đổi món cho gia đình mà chưa biết xử lý thế nào với loại thực phẩm này, hãy cùng chúng tôi khám phá món ngon trong thực đơn hàng ngày nhé!',
     ),
     Product(
@@ -225,7 +225,7 @@ class Product extends Equatable{
       imageUrl:
       'https://images.unsplash.com/photo-1561136594-7f68413baa99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 5500,
-      isRecommended: false,
+      isRecommended: true,
       isPopular: false,
       informationProduct: 'Cà chua là một loại rau quả làm thực phẩm. Quả ban đầu có màu xanh, chín ngả màu từ vàng đến đỏ. Cà chua có vị hơi chua và là một loại thực phẩm bổ dưỡng, tốt cho cơ thể, giàu vitamin C và A, đặc biệt là giàu lycopeme tốt cho sức khỏe.',
     ),
@@ -235,7 +235,7 @@ class Product extends Equatable{
       imageUrl:
       'https://images.unsplash.com/photo-1526346698789-22fd84314424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       price: 25000,
-      isRecommended: false,
+      isRecommended: true,
       isPopular: true,
       informationProduct: 'Ớt đỏ, loại gia vị cay quen thuộc, được dùng trong rất nhiều món ăn ở xứ ta.',
     ),
@@ -245,7 +245,7 @@ class Product extends Equatable{
       imageUrl:
       'https://images.unsplash.com/photo-1636210589096-a53d5dacd702?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
       price: 20000,
-      isRecommended: false,
+      isRecommended: true,
       isPopular: false,
       informationProduct: 'Tỏi là một loài thực vật thuộc họ Hành, nghĩa là có họ hàng với hành tây, hành ta, hành tím, tỏi tây, v.v... và cũng được con người sử dụng làm gia vị, thuốc, rau như những loài họ hàng của nó. ',
     ),
