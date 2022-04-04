@@ -2,13 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopfood/blocs/category/category_bloc.dart';
-import 'package:shopfood/blocs/product/product_bloc.dart';
-import 'package:shopfood/models/category_model.dart';
 import 'package:shopfood/models/models.dart';
 import 'package:shopfood/widgets/custom_appbar.dart';
 import 'package:shopfood/widgets/custom_navbar.dart';
 import 'package:shopfood/widgets/hero_carousel_card.dart';
-import 'package:shopfood/widgets/product_card.dart';
 import 'package:shopfood/widgets/section_title.dart';
 
 import '../../widgets/product_carousel.dart';

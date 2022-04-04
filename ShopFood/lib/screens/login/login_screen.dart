@@ -17,9 +17,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    bool _onShowPass = false;
-
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -36,12 +33,12 @@ class LoginScreen extends StatelessWidget {
                   style: TextStyle(fontSize: 25 , fontWeight: FontWeight.bold, color: Colors.blue),),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 10),
                 child: Image.asset('greenfoodvietnam-2.png',
                     alignment: Alignment.center),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 30),
                 child: TextField(
                   controller: emailController,
                   decoration: InputDecoration(
@@ -53,7 +50,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: const EdgeInsets.only(top: 10),
                 child: TextField(
                       controller: passwordController,
                       decoration: InputDecoration(
@@ -66,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                     ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 10,bottom: 20, left: 70),
+                padding: const EdgeInsets.only(top: 10,bottom: 10, left: 70),
                 child: TextButton(
                     onPressed: ()
                     {
@@ -90,6 +87,4 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-
 }
-

@@ -31,7 +31,7 @@ class InformationScreen extends StatelessWidget {
                     SizedBox(width: 5),
                     Icon(Icons.add_location),
                     SizedBox(width: 10),
-                    Text('Địa chỉ: Nguyễn Huệ, Phường 5, Tuy Hòa, Phú Yên',
+                    Text('Nguyễn Huệ, Phường 5, Tuy Hòa, Phú Yên',
                     style: Theme.of(context).textTheme.headline4),
                   ],
                 ),

@@ -67,34 +67,6 @@ class CheckoutScreen extends StatelessWidget {
                         .read<CheckoutBloc>()
                         .add(UpdateCheckout(zipCode: value));
                   }, context, 'Mã sale'),
-                  // SizedBox(height: 20),
-                  // Container(
-                  //   width: MediaQuery.of(context).size.width,
-                  //   height: 60,
-                  //   alignment: Alignment.bottomCenter,
-                  //   decoration: BoxDecoration(color: Colors.green),
-                  //   child: Row(
-                  //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //     children: [
-                  //       Center(
-                  //         child: Text(
-                  //           'SELECT A PAYMENT METHOD',
-                  //           style: Theme.of(context)
-                  //               .textTheme
-                  //               .headline3!
-                  //               .copyWith(color: Colors.white),
-                  //         ),
-                  //       ),
-                  //       IconButton(
-                  //         onPressed: () {},
-                  //         icon: Icon(
-                  //           Icons.arrow_forward,
-                  //           color: Colors.white,
-                  //         ),
-                  //       )
-                  //     ],
-                  //   ),
-                  // ),
                   SizedBox(height: 10),
                   Text(
                     'Đặt hàng',

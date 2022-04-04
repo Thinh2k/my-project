@@ -29,7 +29,7 @@ class Service{
         Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen())),
       });
     } catch(e) {
-      errorBox(context, 'Sai Email hoặc mật khẩu, vui lòng nhập lại!!!');
+      errorBox(context, 'Sai Email hoặc mật khẩu!!! Vui lòng nhập lại!!!');
     }
   }
 
@@ -50,7 +50,8 @@ class Service{
         context: context,
         builder: (context){
           return AlertDialog(
-            title: Center(child: Text("Đã xảy ra lỗi: ")),
+            title: Center(child: Text("Đã xảy ra lỗi: ",
+                style: Theme.of(context).textTheme.headline3)),
             content: Text(e.toString()),
           );
         });
