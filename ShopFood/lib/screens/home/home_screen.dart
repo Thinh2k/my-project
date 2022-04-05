@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
               if(state is CategoryLoaded){
                 return CarouselSlider(
                   options: CarouselOptions(
-                    aspectRatio: 1.4,
+                    aspectRatio: 1.5,
                     viewportFraction: 0.9,
                     enlargeCenterPage: true,
                     enlargeStrategy: CenterPageEnlargeStrategy.height,

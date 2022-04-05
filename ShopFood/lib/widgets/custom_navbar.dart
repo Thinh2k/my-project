@@ -44,7 +44,11 @@ class CustomNavbar extends StatelessWidget {
         return _buildNavBar(context);
       case '/information':
         return _buildNavBar(context);
+      case '/profile':
+        return _buildNavBar(context);
       case '/user':
+        return _buildNavBar(context);
+      case '/userform':
         return _buildNavBar(context);
       case '/order-confirmation':
         return _buildNavBar(context);
@@ -101,7 +105,7 @@ class CustomNavbar extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 context.read<WishlistBloc>().add(AddProductToWishList(product));
               },
-            );
+            );  
           }
           return Text('Đã xảy ra sự cố');
         },

@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shopfood/screens/home/home_screen.dart';
 import 'package:shopfood/screens/login/login_screen.dart';
+import 'package:shopfood/screens/profile/profile_screen.dart';
+import 'package:shopfood/screens/profile/user_profile.dart';
 
 class Service{
   final auth = FirebaseAuth.instance;
@@ -14,7 +16,7 @@ class Service{
           .then((value) =>
       {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => HomeScreen()))
+            MaterialPageRoute(builder: (context) => UserForm()))
       });
     } catch(e) {
       errorBox(context, 'Email hoặc mật khẩu không phù hợp!!! Vui lòng nhập lại');

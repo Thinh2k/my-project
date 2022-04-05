@@ -10,3 +10,5 @@ export 'login/register_screen.dart';
 export 'login/firebase_user.dart';
 export 'user/user_screen.dart';
 export 'information/information_screen.dart';
+export 'profile/profile_screen.dart';
+export 'profile/user_profile.dart';

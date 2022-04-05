@@ -28,6 +28,10 @@ class AppRouter{
         return InformationScreen.route();
       case UserScreen.routeName:
         return UserScreen.route();
+      case UserForm.routeName:
+        return UserForm.route();
+      case ProfileScreen.routeName:
+        return ProfileScreen.route();
       case CartScreen.routeName:
         return CartScreen.route();
       case CatalogScreen.routeName:

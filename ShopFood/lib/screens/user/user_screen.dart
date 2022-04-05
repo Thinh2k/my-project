@@ -7,6 +7,7 @@ import 'package:shopfood/screens/login/firebase_user.dart';
 import 'package:shopfood/screens/login/login_screen.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shopfood/screens/profile/profile_screen.dart';
 import '../../widgets/custom_appbar.dart';
 import '../../widgets/custom_navbar.dart';
 
@@ -70,6 +71,16 @@ getCurrentUser(){
                 onTap: () async {
                   await FirebaseAuth.instance.signOut();
                   Navigator.push(context, MaterialPageRoute(builder: (context) => InformationScreen()));
+                }
+            ),
+            ListTile(
+                leading: Icon(Icons.account_circle),
+                iconColor: Colors.black,
+                title: Text('Thông tin khách hàng',),
+                textColor: Colors.black,
+                onTap: () async {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
                 }
             ),
               ListTile(
