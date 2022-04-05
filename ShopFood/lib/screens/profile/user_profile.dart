@@ -22,8 +22,8 @@ class _UserFormState extends State<UserForm> {
   TextEditingController _phoneController = TextEditingController();
   TextEditingController _dobController = TextEditingController();
   TextEditingController _genderController = TextEditingController();
-  TextEditingController _ageController = TextEditingController();
-  List<String> gender = ["Name", "Nữ"];
+  TextEditingController _addressController = TextEditingController();
+  List<String> gender = ["Nam", "Nữ"];
 
   Future<void> _selectDateFromPicker(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
@@ -45,20 +45,19 @@ class _UserFormState extends State<UserForm> {
 
     CollectionReference _collectionRef = FirebaseFirestore.instance.collection("profile_user");
     return _collectionRef.doc(currentUser!.email).set({
-      "Tên":_nameController.text,
-      "Sđt":_phoneController.text,
-      "Ngày sinh":_dobController.text,
-      "Giới tính":_genderController.text,
-      "Tuổi":_ageController.text,
-    }).then((value) => Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()))).catchError((error)=>print("something is wrong. $error"));
+      "name":_nameController.text,
+      "phone":_phoneController.text,
+      "dob":_dobController.text,
+      "gender":_genderController.text,
+      "address":_addressController.text,
+    }).then((value) => Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()))).catchError((error)=>print("Có lỗi xảy ra $error"));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Thông tin người dùng'),
-        body: SafeArea(
-          child: Padding(
+      body: SafeArea(
+        child: Padding(
           padding: EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
@@ -72,61 +71,57 @@ class _UserFormState extends State<UserForm> {
                   child: Text(
                     "Gửi biểu mẫu để tiếp tục.",
                     style:
-                    TextStyle(fontSize: 20, color: Colors.green),
+                    TextStyle(fontSize: 22, color: Colors.deepOrange),
                   ),
                 ),
                 Center(
                   child: Text(
-                    "Chúng tôi sẽ không chia sẻ thông tin của bạn với bất kỳ ai.",
+                    "Chúng tôi không chia sẻ thông tin của bạn với bất kỳ ai.",
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.green,
+                      color: Colors.deepOrange,
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 15,
                 ),
-                myTextField("Nhập tên: ",TextInputType.text,_nameController),
-                myTextField("Nhập số điện thoại: ",TextInputType.number,_phoneController),
+                myTextField("Nhập họ và tên",TextInputType.text,_nameController),
+                myTextField("Nhập số điện thoại",TextInputType.number,_phoneController),
                 TextField(
                   controller: _dobController,
                   readOnly: true,
                   decoration: InputDecoration(
-                    hintText: "Nhập ngày sinh: ",
+                    hintText: "Chọn ngày sinh",
                     suffixIcon: IconButton(
                       onPressed: () => _selectDateFromPicker(context),
                       icon: Icon(Icons.calendar_today_outlined),
                     ),
                   ),
                 ),
-                Row(
-                  children: [
-                    Text('Giới tính: '),
-                    TextField(
-                      controller: _genderController,
-                      readOnly: true,
-                      decoration: InputDecoration(
-                        hintText: "",
-                        prefixIcon: DropdownButton<String>(
-                          items: gender.map((String value) {
-                            return DropdownMenuItem<String>(
-                              value: value,
-                              child: new Text(value),
-                              onTap: () {
-                                setState(() {
-                                  _genderController.text = value;
-                                });
-                              },
-                            );
-                          }).toList(),
-                          onChanged: (_) {},
-                        ),
-                      ),
+                TextField(
+                  controller: _genderController,
+                  readOnly: true,
+                  decoration: InputDecoration(
+                    hintText: "Chọn giới tính",
+                    prefixIcon: DropdownButton<String>(
+                      items: gender.map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                          onTap: () {
+                            setState(() {
+                              _genderController.text = value;
+                            });
+                          },
+                        );
+                      }).toList(),
+                      onChanged: (_) {},
                     ),
-                  ],
+                  ),
                 ),
-                myTextField("Nhập số tuổi",TextInputType.number,_ageController),
+                myTextField("Nhập địa chỉ",TextInputType.text,_addressController),
+
                 SizedBox(
                   height: 50,
                 ),
@@ -148,19 +143,22 @@ Widget myTextField(String hintText,keyBoardType,controller){
   );
 }
 Widget customButton (String buttonText,onPressed){
-  return Padding(
-      padding: const EdgeInsets.all(25.0),
-      child: ElevatedButton(
-        onPressed: onPressed,
-        child: Text(
-          buttonText,
-          style: TextStyle(
-              color: Colors.white, fontSize: 18),
-        ),
-        style: ElevatedButton.styleFrom(
-          primary: Colors.orange,
-          elevation: 3,
-        ),
+  return Center(
+    child: SizedBox(
+        width: 100,
+        height: 56,
+          child: ElevatedButton(
+            onPressed: onPressed,
+            child: Text(
+              buttonText,
+              style: TextStyle(
+                  color: Colors.white, fontSize: 18),
+            ),
+            style: ElevatedButton.styleFrom(
+              primary: Colors.orange,
+              elevation: 3,
+            ),
+          ),
       ),
   );
 }

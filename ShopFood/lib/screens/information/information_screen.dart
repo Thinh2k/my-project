@@ -65,6 +65,7 @@ class InformationScreen extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.blue)),
                   ],
                 ),
+                SizedBox(height: 20),
                 Divider(thickness: 2),
                 Positioned(
                     child: Image.asset('greenfood.jpg')),

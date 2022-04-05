@@ -78,8 +78,7 @@ getCurrentUser(){
                 iconColor: Colors.black,
                 title: Text('Thông tin khách hàng',),
                 textColor: Colors.black,
-                onTap: () async {
-                  await FirebaseAuth.instance.signOut();
+                onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
                 }
             ),
