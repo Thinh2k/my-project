@@ -27,17 +27,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
   setDataToTextField(data) {
     return Column(
       children: [
+        SizedBox(height: 20),
+        Center(child: Text('Họ và tên: ')),
         TextFormField(
           controller:
           _nameController = TextEditingController(text: data['name']),
         ),
+        SizedBox(height: 20),
+        Center(child: Text('Số điện thoại: ')),
         TextFormField(
           controller:
           _phoneController = TextEditingController(text: data['phone']),
         ),
+        SizedBox(height: 20),
+        Center(child: Text('Địa chỉ: ')),
         TextFormField(
           controller: _addressController = TextEditingController(text: data['address']),
         ),
+        SizedBox(height: 30),
         ElevatedButton(onPressed: () => updateData(), child: Text("Cập nhật"))
       ],
     );
