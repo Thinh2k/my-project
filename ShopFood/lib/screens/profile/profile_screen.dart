@@ -28,19 +28,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Column(
       children: [
         SizedBox(height: 20),
-        Center(child: Text('Họ và tên: ')),
+        Center(child: Text('Họ và tên: ',
+            style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.orange))),
         TextFormField(
           controller:
           _nameController = TextEditingController(text: data['name']),
         ),
         SizedBox(height: 20),
-        Center(child: Text('Số điện thoại: ')),
+        Center(child: Text('Số điện thoại: ',
+            style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.orange))),
         TextFormField(
           controller:
           _phoneController = TextEditingController(text: data['phone']),
         ),
         SizedBox(height: 20),
-        Center(child: Text('Địa chỉ: ')),
+        Center(child: Text('Địa chỉ: ',
+            style: Theme.of(context).textTheme.headline4!.copyWith(color: Colors.orange))),
         TextFormField(
           controller: _addressController = TextEditingController(text: data['address']),
         ),
